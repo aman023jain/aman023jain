@@ -2,42 +2,7 @@
 I'm currently working on a healthcare patient management app called Patientz, which streamlines patient registration and appointment management. At the same time, I’m refining the features of my social media app, Hive, using modern frameworks like React, Firebase, and Zustand. I'm looking to collaborate on innovative projects that involve cloud computing, secure software development, or machine learning, particularly in areas where performance optimization and real-time data processing are key. I'm also seeking help to enhance my cloud deployment skills and explore advanced CI/CD techniques with Jenkins to improve automation pipelines for my projects.
 
 Currently, I'm diving deeper into cloud infrastructure with AWS and honing my skills in parallel computing with CUDA to optimize performance for high-computation tasks. You can ask me about my experience optimizing parallel GPU code during my internship at BARC, or how I integrated Twilio and Appwrite into my healthcare app for real-time SMS notifications and secure backend management. Fun fact: I'm a numismatist and have a keen interest in following current geopolitical affairs!
-import base64
-import os
-from google import genai
-from google.genai import types
 
-
-def generate():
-    client = genai.Client(
-        api_key=os.environ.get("GEMINI_API_KEY"),
-    )
-
-    model = "gemini-2.5-pro-preview-05-06"
-    contents = [
-        types.Content(
-            role="user",
-            parts=[
-                types.Part.from_text(text="""INSERT_INPUT_HERE"""),
-            ],
-        ),
-    ]
-    generate_content_config = types.GenerateContentConfig(
-        response_mime_type="text/plain",
-    )
-
-    for chunk in client.models.generate_content_stream(
-        model=model,
-        contents=contents,
-        config=generate_content_config,
-    ):
-        print(chunk.text, end="")
-
-if __name__ == "__main__":
-    generate()
-
-
-AIzaSyD2jlOGz0s5dSPkX_-A1GIo9yOZkas2kRI
 
 
 ## 🌐 Socials:
